@@ -15,3 +15,5 @@
 make rebuild
 make up
 ```
+
+上記実行後ブラウザで[http://localhost/](http://localhost/)へアクセス
