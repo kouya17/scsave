@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  db:
+    volumes:
+      - postgres_dev_volume:/var/lib/postgresql/data
+  frontend:
+    command: sh -c "npm run dev"
+  backend:
+    build:
+      target: dev
+  cron:
+    build:
+      target: dev
+    volumes:
+      - ./backend/src:/app
+volumes:
+  postgres_dev_volume:

@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  db:
+    volumes:
+      - postgres_prod_volume:/var/lib/postgresql/data
+  frontend:
+    command: sh -c "npm run start"
+  backend:
+    build:
+      target: prod
+  cron:
+    build:
+      target: prod
+volumes:
+  postgres_prod_volume:

@@ -1,0 +1,1 @@
+* * * * * cd /app ; /usr/local/go/bin/go run /app/scrape/main.go > /app/scrape/debug.log 2>&1
